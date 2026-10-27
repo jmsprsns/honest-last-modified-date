@@ -97,6 +97,9 @@ Updates set today's date again, as WordPress normally does. Turn it back on and 
 
 == Changelog ==
 
+= 1.0.1 =
+* The editor's word count now says how many words are needed when it reports "at least" a number.
+
 = 1.0.0 =
 * First release.
 

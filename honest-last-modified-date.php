@@ -3,7 +3,7 @@
  * Plugin Name:       Honest Last Modified Date
  * Plugin URI:        https://www.contentpowered.com
  * Description:       Only changes a post's Last modified date when enough of it has really changed: a minimum number of words, a percentage, or both, set separately for posts and pages.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 5.8
  * Requires PHP:      7.2
  * Author:            Content Powered

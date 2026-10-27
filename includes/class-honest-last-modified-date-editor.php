@@ -150,8 +150,12 @@ final class Honest_Last_Modified_Date_Editor {
 				number_format_i18n( $needed )
 			);
 		} elseif ( $result['met'] ) {
-			/* translators: %s: number of words. */
-			$count = sprintf( __( 'At least %s words changed', 'honest-last-modified-date' ), number_format_i18n( $result['changed'] ) );
+			$count = sprintf(
+				/* translators: 1: words changed (a lower bound), 2: words needed. */
+				__( 'At least %1$s words changed, %2$s needed', 'honest-last-modified-date' ),
+				number_format_i18n( $result['changed'] ),
+				number_format_i18n( $needed )
+			);
 		} else {
 			$count = sprintf(
 				/* translators: 1: words changed (estimate), 2: words needed. */
