@@ -1,0 +1,137 @@
+/**
+ * "Last modified date" panel (block editor) and box (classic editor).
+ * Only loaded on editing screens of content types the plugin looks after.
+ */
+
+.hlmd-panel,
+.hlmd-box {
+	--hlmd-accent: var(--wp-admin-theme-color, #3858e9);
+	--hlmd-ok: #00a32a;
+}
+
+.hlmd-shown {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin: 0 0 12px;
+}
+
+.hlmd-shown > div,
+.hlmd-shown > svg {
+	display: inline-flex;
+	flex: none;
+	align-items: center;
+	justify-content: center;
+	width: 34px;
+	height: 34px;
+	border-radius: 8px;
+	background: #f0f6fc;
+	color: var(--hlmd-accent);
+}
+
+.hlmd-box .hlmd-shown > svg {
+	box-sizing: border-box;
+	padding: 7px;
+}
+
+.hlmd-shown-text {
+	display: grid;
+	gap: 1px;
+	line-height: 1.35;
+}
+
+.hlmd-shown-label {
+	color: #757575;
+	font-size: 11px;
+	font-weight: 500;
+	letter-spacing: .02em;
+	text-transform: uppercase;
+}
+
+.hlmd-shown-text strong {
+	color: #1e1e1e;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.hlmd-meter {
+	height: 6px;
+	overflow: hidden;
+	border-radius: 3px;
+	background: #f0f0f0;
+}
+
+.hlmd-meter span {
+	display: block;
+	height: 100%;
+	border-radius: 3px;
+	background: var(--hlmd-accent);
+	transition: width .3s ease;
+}
+
+.hlmd-meter.is-met span { background: var(--hlmd-ok); }
+
+.hlmd-count {
+	margin: 8px 0 0;
+	color: #1e1e1e;
+	line-height: 1.5;
+}
+
+.hlmd-muted { color: #757575; }
+
+.hlmd-count .hlmd-muted::before { content: "\00b7\00a0"; }
+
+.hlmd-verdict {
+	margin: 10px 0 14px;
+	padding: 8px 10px;
+	border-radius: 4px;
+	background: #f0f6fc;
+	color: #1e1e1e;
+	font-weight: 500;
+	line-height: 1.45;
+}
+
+.hlmd-verdict.is-update {
+	background: #edfaef;
+	color: #005c12;
+}
+
+.hlmd-note {
+	margin: 0;
+	color: #757575;
+	line-height: 1.5;
+}
+
+.hlmd-note + .hlmd-choices { margin-top: 12px; }
+
+/* Block editor radios */
+.hlmd-panel .hlmd-choices .components-base-control__label,
+.hlmd-panel .hlmd-choices legend {
+	margin-bottom: 8px;
+	font-size: 11px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+/* Classic editor radios */
+.hlmd-box .hlmd-choices {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.hlmd-box .hlmd-choices legend {
+	margin: 0 0 6px;
+	color: #1d2327;
+	font-weight: 600;
+}
+
+.hlmd-box .hlmd-choices label {
+	display: flex;
+	align-items: flex-start;
+	gap: 6px;
+	margin: 0 0 6px;
+	line-height: 1.45;
+}
+
+.hlmd-box .hlmd-choices input { margin-top: 2px; }
